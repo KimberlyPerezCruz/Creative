@@ -1,0 +1,148 @@
+body{
+	background :#6c648b;
+	color: white
+}
+#mainBox{
+	width: 100%;
+	position: relative;
+	height:100%;
+	
+}
+.right, .left{
+	z-index:1;
+}
+
+/*#difuser{
+	height:100%;
+	width:100%;
+	position:absolute;
+	z-index: 1;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6c648b+1,6c648b+100&0+41,1+78 */
+/*	background: -moz-radial-gradient(center, ellipse cover,  rgba(108,100,139,0) 1%, rgba(108,100,139,0) 41%, rgba(108, 100, 139, 0.62) 78%, rgba(108,100,139,1) 100%); /* FF3.6-15 */
+/*	background: -webkit-radial-gradient(center, ellipse cover,  rgba(108,100,139,0) 1%,rgba(108,100,139,0) 41%,rgba(108, 100, 139, 0.52) 78%,rgba(108,100,139,1) 100%); /* Chrome10-25,Safari5.1-6 */
+/*	background: radial-gradient(ellipse at center,  rgba(108,100,139,0) 1%,rgba(108,100,139,0) 41%,rgba(108, 100, 139, 0.41) 78%,rgba(108, 100, 139, 0.53) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/*	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006c648b', endColorstr='#6c648b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+/*}*/
+img{
+	height:100% !IMPORTANT;
+}
+.boxone{
+	background: rgba(157, 255, 0, 0.22);
+	height: 100%;
+	width: 100%;
+	padding: 10px;
+}
+
+#mainHolder{
+	background:rgba(107, 186, 167, 0.6);
+	width: 100%;
+	position: relative;
+	font-size: 22;
+	font-family: Comic Sans MS;
+	overflow: auto;
+	height: 85%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+#infoStart{
+	margin:15px;
+}
+#mainHolder2{
+	width:80%;
+	margin-left:15%;
+}
+.startTab{
+	
+}
+#start{
+	background:rgba(255, 177, 34, 0.53);
+    border: 0;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    font-size: 35;
+    left:0; 
+    margin-top:60px;
+}
+#start:hover{
+	 background: rgba(255, 177, 34, 0.67);
+}
+#create, #createButton {
+    background: #656262;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: Comic Sans MS;
+    font-size: 60px;
+}
+#createButton{
+	width: 50% !IMPORTANT;
+	height: 50% !IMPORTANT;
+	left: 25%;
+	top: 25%;
+	position: relative;
+	border: 2px;
+}
+#createButton:hover{
+	color: #383838;
+}
+.out{
+	width: 40%;
+	height: 55%;
+	margin-bottom: 4px;
+	left: 3%;
+	position: relative;
+	float: left;
+	margin-left: 4px;
+}
+.img-{
+	width: 100%;
+    height: 100%;
+    border:2px solid rgba(255, 177, 34, 0.53);
+}
+.choose{
+	height: 70px;
+    width: 100%;
+    background: rgba(107, 186, 167, 0.6);
+    position: absolute;
+    z-index: 10;
+    font-family: Comic Sans MS;
+    color: rgba(255, 255, 255, 0.57);
+    font-size: 41px;
+    padding-left: 38%;
+    padding-top: 1%;
+    top: 0;
+    left: 0;
+}
+.img-:hover{
+	border:4px solid rgba(255, 177, 34, 0.53);
+}
+.info{
+	position: absolute;
+	height: 70%;
+	width: 70%;
+	font-family: Comic Sans MS;
+	font-size: 45;
+	color: white;
+	top: 20%;
+	left: 16%;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(216, 225, 108, 0.95);
+     text-shadow:
+   4px 3px 0 #000,  
+    1px 6px 0 #000,
+    2px 5px 0 #000,
+     1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+#restart{
+	position: absolute;
+	width: 12%;
+	background: rgba(245, 222, 179, 0);
+	border: 0;
+	font-size: 20px;
+	color: rgba(253, 253, 253, 0.41);
+	z-index:100;
+}
+#restart:hover{
+	color: rgb(241, 241, 241);
+}
