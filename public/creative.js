@@ -154,7 +154,7 @@ function carouselPrevious(){
 	function startCarousel() {
 		// Activate Carousel
 		
-		var slide = setInterval(function(){carouselNext();},5000);
+		var slide = setInterval(function(){carouselNext();},10000);
         $(".circle").click(function(){ 
         	clearInterval(slide);
         	console.log($(this).index());
