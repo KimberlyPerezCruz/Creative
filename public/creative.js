@@ -86,10 +86,10 @@ loadMessages();
 	    	$("#mainBox").show();
 
 	    	// Save to Database
-			ref.child("Message"+(arr[0])/*counter*/).set(message)
-			ref.child("Carousel"+(arr[0])/*counter*/).set(carouselUpdate)
-			ref.child("Counter").set((arr[0])/*counter*/)
-			databaseCounter = arr.length/*counter*/;
+			ref.child("Message"+(arr[0])).set(message)
+			ref.child("Carousel"+(arr[0])).set(carouselUpdate)
+			ref.child("Counter").set((arr[0]))
+			databaseCounter = arr.length;
 			$(".carousel-inner .item.createOne").before(message);
 			$(".carousel-indicators .circle.createOne").before(carouselUpdate);
 	    startCarousel();
@@ -105,17 +105,17 @@ loadMessages();
 	}
 
 // Downloading this html 
-	function save() {
-	  var html = [document.documentElement.innerHTML];
-	  var blob = new Blob(html, {type: "text/html"});
-	  var a = document.createElement("a");
-	  a.href = URL.createObjectURL(blob);
-	  a.download = "copy.html";
-	  a.hidden = true;
-	  document.body.appendChild(a);
-	  a.innerHTML = "";
-	  a.click();
-	}
+	// function save() {
+	//   var html = [document.documentElement.innerHTML];
+	//   var blob = new Blob(html, {type: "text/html"});
+	//   var a = document.createElement("a");
+	//   a.href = URL.createObjectURL(blob);
+	//   a.download = "copy.html";
+	//   a.hidden = true;
+	//   document.body.appendChild(a);
+	//   a.innerHTML = "";
+	//   a.click();
+	// }
 function carouselNext(){
 	if( $(".carousel-inner .active").next().length==0){
 		$(".carousel-inner .active").removeClass("active");
@@ -156,6 +156,7 @@ function carouselPrevious(){
 		
 		var slide = setInterval(function(){carouselNext();},5000);
         $(".circle").click(function(){ 
+        	clearInterval(slide);
         	console.log($(this).index());
         	var index = $(this).index();
         	$(".carousel-inner .active").removeClass("active");

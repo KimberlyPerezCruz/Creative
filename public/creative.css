@@ -146,3 +146,7 @@ img{
 #restart:hover{
 	color: rgb(241, 241, 241);
 }
+.circle{
+	margin-left: 3px !IMPORTANT;
+	margin-right: 3px !IMPORTANT;	
+}
