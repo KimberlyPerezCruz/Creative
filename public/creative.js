@@ -92,7 +92,7 @@ loadMessages();
 			databaseCounter = arr.length;
 			$(".carousel-inner .item.createOne").before(message);
 			$(".carousel-indicators .circle.createOne").before(carouselUpdate);
-	    startCarousel();
+	    // startCarousel();
 	    }
     });
 
@@ -154,7 +154,7 @@ function carouselPrevious(){
 	function startCarousel() {
 		// Activate Carousel
 		
-		var slide = setInterval(function(){carouselNext();},10000);
+		var slide = setInterval(function(){carouselNext();},15000);
         $(".circle").click(function(){ 
         	clearInterval(slide);
         	console.log($(this).index());
