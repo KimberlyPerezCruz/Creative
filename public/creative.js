@@ -14,13 +14,15 @@ $(function(){
   var app = firebase.initializeApp(config);
 
 var image;
-
 var databaseCounter;
-initialize();
-
 var database = firebase.database(app);
 var ref = database.ref("Message");
 var start = true;
+
+initialize();
+startCarousel();
+loadMessages();
+
 // Loading info from database
 function loadMessages(){
 	if(start){
@@ -49,19 +51,15 @@ function loadMessages(){
 	        databaseCounter++;
 	    });
 	}
-
 	counter = databaseCounter+1;
 }
-loadMessages();
 
 // Click on Start button
 	$("#start").click(function() {
 		$("#mainHolder").hide();	
 		$("#mainBox").show();
 		$("#restart").show();
-		startCarousel();
 	});
-
 // Click on Create button
 	$("#createButton").click(function() {
 		$("#mainBox").hide();	
@@ -92,7 +90,6 @@ loadMessages();
 			databaseCounter = arr.length;
 			$(".carousel-inner .item.createOne").before(message);
 			$(".carousel-indicators .circle.createOne").before(carouselUpdate);
-	    // startCarousel();
 	    }
     });
 
@@ -104,18 +101,6 @@ loadMessages();
 		$("#restart").hide();
 	}
 
-// Downloading this html 
-	// function save() {
-	//   var html = [document.documentElement.innerHTML];
-	//   var blob = new Blob(html, {type: "text/html"});
-	//   var a = document.createElement("a");
-	//   a.href = URL.createObjectURL(blob);
-	//   a.download = "copy.html";
-	//   a.hidden = true;
-	//   document.body.appendChild(a);
-	//   a.innerHTML = "";
-	//   a.click();
-	// }
 function carouselNext(){
 	if( $(".carousel-inner .active").next().length==0){
 		$(".carousel-inner .active").removeClass("active");
@@ -132,32 +117,30 @@ function carouselNext(){
 		$(".carousel-indicators .active").removeClass("active");
 		next.addClass("active");
 	}
-}
-function carouselPrevious(){
-	if( $(".carousel-inner .active").prev().length==0){
-		$(".carousel-inner .active").removeClass("active");
-		$(".carousel-inner .item:last").addClass("active");
-		$(".carousel-indicators .active").removeClass("active");
-		$(".carousel-indicators .circle:last").addClass("active");
 	}
-	else{
-		var prev = $(".carousel-inner .active").prev();
-		$(".carousel-inner .active").removeClass("active");
-		prev.addClass("active");
 
-		prev = $(".carousel-indicators .active").prev();
-		$(".carousel-indicators .active").removeClass("active");
-		prev.addClass("active");
+	function carouselPrevious(){
+		if( $(".carousel-inner .active").prev().length==0){
+			$(".carousel-inner .active").removeClass("active");
+			$(".carousel-inner .item:last").addClass("active");
+			$(".carousel-indicators .active").removeClass("active");
+			$(".carousel-indicators .circle:last").addClass("active");
+		}
+		else{
+			var prev = $(".carousel-inner .active").prev();
+			$(".carousel-inner .active").removeClass("active");
+			prev.addClass("active");
+
+			prev = $(".carousel-indicators .active").prev();
+			$(".carousel-indicators .active").removeClass("active");
+			prev.addClass("active");
+		}
 	}
-}
 // Carousel
 	function startCarousel() {
-		// Activate Carousel
-		
 		var slide = setInterval(function(){carouselNext();},15000);
-        $(".circle").click(function(){ 
+		$( document ).on( 'click', '.circle', function() {
         	clearInterval(slide);
-        	console.log($(this).index());
         	var index = $(this).index();
         	$(".carousel-inner .active").removeClass("active");
         	var photo = $(".item")[index];

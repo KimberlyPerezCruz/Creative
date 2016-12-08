@@ -11,18 +11,6 @@ body{
 .right, .left{
 	z-index:1;
 }
-
-/*#difuser{
-	height:100%;
-	width:100%;
-	position:absolute;
-	z-index: 1;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6c648b+1,6c648b+100&0+41,1+78 */
-/*	background: -moz-radial-gradient(center, ellipse cover,  rgba(108,100,139,0) 1%, rgba(108,100,139,0) 41%, rgba(108, 100, 139, 0.62) 78%, rgba(108,100,139,1) 100%); /* FF3.6-15 */
-/*	background: -webkit-radial-gradient(center, ellipse cover,  rgba(108,100,139,0) 1%,rgba(108,100,139,0) 41%,rgba(108, 100, 139, 0.52) 78%,rgba(108,100,139,1) 100%); /* Chrome10-25,Safari5.1-6 */
-/*	background: radial-gradient(ellipse at center,  rgba(108,100,139,0) 1%,rgba(108,100,139,0) 41%,rgba(108, 100, 139, 0.41) 78%,rgba(108, 100, 139, 0.53) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-/*	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006c648b', endColorstr='#6c648b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-/*}*/
 img{
 	height:100% !IMPORTANT;
 }
@@ -48,8 +36,8 @@ img{
 	margin:15px;
 }
 #mainHolder2{
-	width:80%;
-	margin-left:15%;
+	width: 100%;
+	margin-left: 5%;
 }
 .startTab{
 	
@@ -87,35 +75,35 @@ img{
 	color: #383838;
 }
 .out{
-	width: 40%;
+	width: 45%;
 	height: 55%;
-	margin-bottom: 4px;
-	left: 3%;
+	margin: 2px;
+	left: 0%;
 	position: relative;
 	float: left;
-	margin-left: 4px;
 }
 .img-{
 	width: 100%;
-    height: 100%;
-    border:2px solid rgba(255, 177, 34, 0.53);
+	height: 100%;
+	border: 3px solid rgb(74, 121, 100);
 }
 .choose{
-	height: 70px;
-    width: 100%;
-    background: rgba(107, 186, 167, 0.6);
-    position: absolute;
-    z-index: 10;
-    font-family: Comic Sans MS;
-    color: rgba(255, 255, 255, 0.57);
-    font-size: 41px;
-    padding-left: 38%;
-    padding-top: 1%;
-    top: 0;
-    left: 0;
+	height: 78px;
+	width: 100%;
+	background: rgba(107, 186, 167, 0.7);
+	position: fixed;
+	z-index: 10;
+	font-family: Comic Sans MS;
+	color: rgba(255, 255, 255, 0.57);
+	font-size: 41px;
+	padding-left: 38%;
+	padding-top: 1%;
+	top: 0;
+	left: 0;
 }
 .img-:hover{
-	border:4px solid rgba(255, 177, 34, 0.53);
+	border:5px solid rgba(74, 121, 100, 0.9);
+	opacity: 0.7;
 }
 .info{
 	position: absolute;
